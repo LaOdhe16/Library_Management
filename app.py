@@ -85,6 +85,13 @@ def register():
         username = request.form['username']
         password = generate_password_hash(request.form['password'])
         email = request.form['email']
+
+        # Cek jika username atau email sudah terdaftar
+        existing_user = fetch_one("SELECT * FROM users WHERE username = %s OR email = %s", (username, email))
+        if existing_user:
+            flash('Username atau email sudah terdaftar!', 'danger')
+            return redirect(url_for('register'))
+        
         try:
             execute_query("INSERT INTO users (username, password, email) VALUES (%s, %s, %s)", (username, password, email))
             flash('Registrasi berhasil! Silakan login.', 'success')
@@ -111,7 +118,7 @@ def login():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    borrowings = fetch_all("""
+    borrowings = fetch_all(""" 
         SELECT b.title, br.borrow_date, br.return_date, br.status
         FROM borrowings br
         JOIN books b ON br.book_id = b.id
