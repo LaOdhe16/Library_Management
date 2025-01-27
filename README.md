@@ -45,7 +45,7 @@ To deploy the application on Vercel, follow these steps:
 
 Once deployed, you can access the live application using the following link:
 ```bash
-https://library-management-puce-gamma.vercel.app/
+[https://library-management-puce-gamma.vercel.app/](https://library-management-8ixn.vercel.app/)
 
 
 
