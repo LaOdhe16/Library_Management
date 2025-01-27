@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Buku Tersedia</h1>
+<div class="book-list">
+    {% for book in books %}
+    <div class="book-item">
+        {% set image = book['image'] %}
+        {% if not image %}
+            {% if book['title'] == 'Python Programming' %}
+                {% set image = 'default-book1.png' %}
+            {% elif book['title'] == 'Data Science for Beginners' %}
+                {% set image = 'default-book2.png' %}
+            {% elif book['title'] == 'The Great Gatsby' %}
+                {% set image = 'default-book3.png' %}
+            {% else %}
+                {% set image = 'default-book.png' %}
+            {% endif %}
+        {% endif %}
+        <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ book['title'] }}">
+        <h3>{{ book['title'] }}</h3>
+        <p>{{ book['author'] }}</p>
+        <p>{{ book['copies_available'] }} copies available</p>
+        <form method="POST" action="{{ url_for('borrow_book', book_id=book['id']) }}">
+            <button type="submit" class="btn btn-primary">Pinjam Buku</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,299 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #4e73df, #F87171); /* Blue to Red Gradient */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Navigation Bar */
+header {
+    background: linear-gradient(135deg, #4e73df, #F87171); /* Blue to Red Gradient */
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #F87171; /* Red */
+}
+
+/* Social Media Icons Section (Positioned at the bottom and larger size) */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar ikon sosial media */
+    margin-top: 40px;
+    position: fixed;
+    bottom: 40px; /* Menurunkan posisi ikon sedikit lebih tinggi dari bawah */
+    width: 100%;
+    z-index: 1000;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;  /* Memperbesar ukuran ikon */
+    height: 50px; /* Memperbesar ukuran ikon */
+    background-color: transparent;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    width: 60%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.social-icons a:hover img {
+    opacity: 1;
+}
+
+/* Cards */
+.book-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Book List */
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Mengurangi jarak antar buku */
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.book-item {
+    width: calc(33% - 20px); /* Mengatur setiap buku menempati sepertiga lebar */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px; /* Mengurangi padding agar lebih compact */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-item img {
+    width: 70%;  /* Ukuran gambar lebih kecil */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.book-item h3 {
+    font-size: 1.1rem; /* Mengurangi ukuran font judul buku */
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    font-size: 0.9rem; /* Mengurangi ukuran font deskripsi buku */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4e73df;
+    outline: none;
+}
+
+input[type="date"] {
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Login and Register Pages */
+.login-register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.login-register-container form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-register-container .form-group {
+    margin-bottom: 20px;
+}
+
+.login-register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4e73df;
+}
+
+.login-register-container .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.login-register-container .btn-primary {
+    background-color: #F87171; /* Red */
+}
+
+.login-register-container .btn-primary:hover {
+    background-color: white;
+    color: #F87171;
+}
+
+.login-register-container .already-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .book-item {
+        width: calc(50% - 20px); /* Setiap buku menempati setengah lebar pada layar kecil */
+    }
+
+    .book-list {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .mobile-nav-button {
+        display: block;
+    }
+}
+
+
+.flash-success {
+    background-color: green;
+    color: white;
+}
+
+.flash-danger {
+    background-color: red;
+    color: white;
+}

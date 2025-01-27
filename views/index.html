@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero">
+    <h1>Welcome to the Library Management System</h1>
+    <p>Your gateway to endless knowledge!</p>
+    <a href="{{ url_for('books') }}"><button class="btn btn-primary">Explore Books</button></a>
+</div>
+
+<div class="container">
+    <h2>Featured Books</h2>
+    <div class="row">
+        <div class="column">
+            <div class="book-card">
+                <img src="{{ url_for('static', filename='images/book1.jpg') }}" alt="Book 1">
+                <h3>Book Title 1</h3>
+                <p>Author: John Doe</p>
+                <a href="{{ url_for('books') }}" class="btn btn-primary">See Details</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="book-card">
+                <img src="{{ url_for('static', filename='images/book2.jpg') }}" alt="Book 2">
+                <h3>Book Title 2</h3>
+                <p>Author: Jane Doe</p>
+                <a href="{{ url_for('books') }}" class="btn btn-primary">See Details</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="book-card">
+                <img src="{{ url_for('static', filename='images/book3.jpg') }}" alt="Book 3">
+                <h3>Book Title 3</h3>
+                <p>Author: Mark Smith</p>
+                <a href="{{ url_for('books') }}" class="btn btn-primary">See Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
