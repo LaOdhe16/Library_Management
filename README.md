@@ -19,6 +19,10 @@ Installation steps:
 1. Clone this repo.
 2. Install dependencies: `pip freeze > requirements.txt`
 
+## deploy on vercel
+```bash
+https://library-management-puce-gamma.vercel.app/
+
 ## Usage
 
 Cara menggunakan aplikasi ini:
@@ -26,5 +30,4 @@ Cara menggunakan aplikasi ini:
 python app.py
 
 
-## deploy on vercel
 
